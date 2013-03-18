@@ -19,8 +19,17 @@
 
 <title>Hoang Anh Phat Coffee</title>
 </head>
-
+    <script type="text/javascript">
+	function getvideo(url){		
+	// alert(url);
+	document.getElementById('youtubevd').src = 'http://www.youtube.com/embed/'+url;
+	}	
+    </script>
 <body>
+<?php
+include('libs/db_connect.php'); 
+include('libs/hamhaydung.php'); 
+?>
 <div id="container">
 	<div id="header">
     	<div id="ctn_head">
