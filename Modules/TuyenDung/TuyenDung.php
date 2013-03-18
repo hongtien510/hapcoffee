@@ -1,7 +1,3 @@
-<?php
-include('libs/db_connect.php'); 
-include('libs/hamhaydung.php'); 
-?>
 	<div id="tintuc">
 		<p class="phincf"><img src="images/phincf.png" alt="PhinCF" title="Cafe HAP" /></p>
 		<div class="main_nav">
