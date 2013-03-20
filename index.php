@@ -65,17 +65,9 @@ include('libs/hamhaydung.php');
     <div id="ctn_content">
     	<div id="content">
     		<div id="content_left">
-            	<div id="hotline">
-                	<p class="img_hotline">
-                    	<img src="images/hotline.jpg" alt="hotline"  />
-                    </p>
-                    <div class="number_hotline">
-                    	<ul>
-                        	<li>Mrs Na - 01233 377 377</li>
-                            <li>Mrs Na - 0949 968 938</li>
-                        </ul>
-                    </div>
-                </div>
+            	<?php
+				include('Modules/hotro/dienthoai.php');
+				?>
                 <div id="join_facebook">
                 	<div class="header_join_fb"></div>
                     <div class="ct_join_fb">
@@ -103,67 +95,14 @@ include('libs/hamhaydung.php');
     <div id="library">
     	<?php
 		include('Modules/video/video_dautien.php');
+		include('Modules/photo/photo.php');
 		?>
 		
 		
 		
 		
 		
-        <div class="photo">
         
-         <script type="text/javascript">
-            jQuery.noConflict();
-            (function($){
-                $(document).ready(function(){
-                  $("#scroller").simplyScroll({
-                        autoMode: 'loop'
-                    });
-                });
-            
-            })(jQuery);
-         </script>
-            
-                <div class="simply-scroll simply-scroll-container">
-                <div class="simply-scroll-clip">
-                <ul id="scroller" class="simply-scroll-list" style="width: 3814px;">
-                    <li><a href="images/01.jpg" class="lb lb_abcd" title=""><img src="images/01_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/03.jpg" class="lb lb_abcd" title=""><img src="images/03_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/05.jpg" class="lb lb_abcd" title=""><img src="images/05_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/06.jpg" class="lb lb_abcd" title=""><img src="images/06_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/07.jpg" class="lb lb_abcd" title=""><img src="images/07_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/01.jpg" class="lb lb_abcd" title=""><img src="images/01_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/03.jpg" class="lb lb_abcd" title=""><img src="images/03_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/05.jpg" class="lb lb_abcd" title=""><img src="images/05_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/06.jpg" class="lb lb_abcd" title=""><img src="images/06_thumb.jpg" alt=""></a></li>
-                    <li><a href="images/07.jpg" class="lb lb_abcd" title=""><img src="images/07_thumb.jpg" alt=""></a></li>
-                </ul>
-			<script type="text/javascript">
-                jQuery(function($) {
-                    var $chosenSheet,
-                    $stylesheets = $( "a[id^=theme-]" );
-                    
-                    // theme switcher
-                    $stylesheets.click(
-                    function() {
-                        $chosenSheet = $( this ).attr( "href" );
-                        $( "#theme").attr( "href", $chosenSheet );
-                        
-                        // mark this A as an active
-                        $stylesheets.removeClass( "active" );
-                        $( this ).addClass( "active" );
-                        return false;
-                    }
-                    );
-                    
-                    // run rlightbox
-                    $( ".lb" ).rlightbox();
-                    $( ".lb_title-overwritten" ).rlightbox({overwriteTitle: true});
-                });
-            </script>
-                </div>
-              
-            </div>
-        </div>
     </div><!--End #library-->
     <div id="footer">
     	<img src="images/bg_footer.jpg" alt="footer" title="footer" />

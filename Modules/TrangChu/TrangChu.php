@@ -11,6 +11,10 @@
                     <!--Noi dung Tab tin tuc-->
                     <div id="content_nav_tintuc">
                     	<div id="top_nav">
+						<?php
+						$sql_tintuc="select * from baiviet where anhien='0' AND loaibaiviet='tintuc' order by mabv DESC LIMIT 0, 5";
+						$rs_tintuc=mysql_query($sql_tintuc);			
+						?>
                         	<div class="img_top_nav">
                             	<img src="images/phongcanh.jpg" alt="" title="" />
                             </div>
@@ -25,11 +29,21 @@
                         </div>
                         <div id="bottom_nav">
                         	<ul class="ul_bottom_nav">
+							<?php
+								
+							while($r_tintuc=mysql_fetch_assoc($rs_tintuc))
+							{
+								$link = ConvertUrl("?action=baiviet&mbv=$r_tintuc[mabv]");
+								echo "<li><a href='$link'>$r_tintuc[tenbaiviet]</a></li>";
+							}
+							?>
+							<!--
                             	<li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
                                 <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
                                 <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
                                 <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
                                 <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
+							-->
                             </ul>
                         </div>
                     </div>
