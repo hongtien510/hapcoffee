@@ -12,18 +12,20 @@
                     <div id="content_nav_tintuc">
                     	<div id="top_nav">
 						<?php
-						$sql_tintuc="select * from baiviet where anhien='0' AND loaibaiviet='tintuc' order by mabv DESC LIMIT 0, 5";
-						$rs_tintuc=mysql_query($sql_tintuc);			
+						$sql_tintuc="select * from baiviet where anhien='0' AND loaibaiviet='tintuc' order by mabv DESC LIMIT 0, 6";
+						$rs_tintuc=mysql_query($sql_tintuc);	
+						$r_tintuc_f=mysql_fetch_assoc($rs_tintuc);
+						$link_f = ConvertUrl("?action=baiviet&mbv=$r_tintuc_f[mabv]");
 						?>
                         	<div class="img_top_nav">
                             	<img src="images/phongcanh.jpg" alt="" title="" />
                             </div>
                             <div class="ct_top_nav">
                             	<p class="title_top_post">
-                                	<a href="">Sơ lược về Hoàng Anh Phát Coffee</a>
+                                	<a href="<?php echo $link_f;?>"><?php echo $r_tintuc_f['tenbaiviet'];?></a>
                                 </p>
                                 <p class="content_top_post">
-                                	Thương hiệu cà phê Hoàng Anh Phát được phát triển trên sự kế nghiệp gia đình ở Tp Ban Mê Thuột sản xuất cà phê để làm quà biếu cho những ai có dịp ghé thăm Tây Nguyên.
+									<?php echo cut_string(strip_tags($r_tintuc_f['noidung']),400);?>
                                 </p>
                             </div>
                         </div>
@@ -37,18 +39,17 @@
 								echo "<li><a href='$link'>$r_tintuc[tenbaiviet]</a></li>";
 							}
 							?>
-							<!--
-                            	<li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-							-->
                             </ul>
                         </div>
                     </div>
                     
                     <!--Noi dung Tab truyen thong-->
+					<?php
+						$sql_truyenthong="select * from baiviet where anhien='0' AND loaibaiviet='truyenthong' order by mabv DESC LIMIT 0, 6";
+						$rs_truyenthong=mysql_query($sql_truyenthong);	
+						$r_truyenthong_f=mysql_fetch_assoc($rs_truyenthong);
+						$link_truyenthong_f = ConvertUrl("?action=baiviet&mbv=$r_truyenthong_f[mabv]");
+					?>
                     <div id="content_nav_truyenthong">
                     	<div id="top_nav">
                         	<div class="img_top_nav">
@@ -56,26 +57,35 @@
                             </div>
                             <div class="ct_top_nav">
                             	<p class="title_top_post">
-                                	<a href="">Sơ lược về Hoàng Anh Phát Coffee</a>
+                                	<a href="<?php echo $link_truyenthong_f;?>"><?php echo $r_truyenthong_f['tenbaiviet'];?></a>
                                 </p>
                                 <p class="content_top_post">
-                                	Thương hiệu cà phê Hoàng Anh Phát được phát triển trên sự kế nghiệp gia đình ở Tp Ban Mê Thuột sản xuất cà phê để làm quà biếu cho những ai có dịp ghé thăm Tây Nguyên.
+                                		<?php echo cut_string(strip_tags($r_truyenthong_f['noidung']),400);?>
                                 </p>
                             </div>
                         </div>
                         <div id="bottom_nav">
                         	<ul class="ul_bottom_nav">
-                            	<li><a href="">Sơ lược về Hoàng Anh Phát Coffee- Truyen Thong</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee- Truyen Thong</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee- Truyen Thong</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee- Truyen Thong</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee- Truyen Thong</a></li>
+								<?php
+									
+								while($r_truyenthong=mysql_fetch_assoc($rs_truyenthong))
+								{
+									$link = ConvertUrl("?action=baiviet&mbv=$r_truyenthong[mabv]");
+									echo "<li><a href='$link'>$r_truyenthong[tenbaiviet]</a></li>";
+								}
+								?>
                             </ul>
                         </div>
                     </div>
                 </div>
 				
 				<!--End #tintuc-->
+				<?php
+						$sql_cuocsoncafe="select * from baiviet where anhien='0' AND loaibaiviet='cuocsoncafe' order by mabv DESC LIMIT 0, 6";
+						$rs_cuocsoncafe=mysql_query($sql_cuocsoncafe);	
+						$r_cuocsoncafe_f=mysql_fetch_assoc($rs_cuocsoncafe);
+						$link_cuocsoncafe_f = ConvertUrl("?action=baiviet&mbv=$r_cuocsoncafe_f[mabv]");
+					?>
                 <div id="baiviet">
                 	<p class="lycf"><img src="images/lycf.png" alt="LyCF" title="Cafe HAP" /></p>
                 	<div class="main_nav">
@@ -91,20 +101,22 @@
                             </div>
                             <div class="ct_top_nav">
                             	<p class="title_top_post">
-                                	<a href="">Sơ lược về Hoàng Anh Phát Coffee</a>
+                                	<a href="<?php echo $link_cuocsoncafe_f;?>"><?php echo $r_cuocsoncafe_f['tenbaiviet'];?></a>
                                 </p>
                                 <p class="content_top_post">
-                                	Thương hiệu cà phê Hoàng Anh Phát được phát triển trên sự kế nghiệp gia đình ở Tp Ban Mê Thuột sản xuất cà phê để làm quà biếu cho những ai có dịp ghé thăm Tây Nguyên.
+                                	<?php echo cut_string(strip_tags($r_cuocsoncafe_f['noidung']),400);?>
                                 </p>
                             </div>
                         </div>
                         <div id="bottom_nav">
                         	<ul class="ul_bottom_nav">
-                            	<li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
-                                <li><a href="">Sơ lược về Hoàng Anh Phát Coffee</a></li>
+								<?php									
+								while($r_cuocsoncafe=mysql_fetch_assoc($rs_cuocsoncafe))
+								{
+									$link = ConvertUrl("?action=baiviet&mbv=$r_cuocsoncafe[mabv]");
+									echo "<li><a href='$link'>$r_cuocsoncafe[tenbaiviet]</a></li>";
+								}
+								?>
                             </ul>
                         </div>
                     </div>
