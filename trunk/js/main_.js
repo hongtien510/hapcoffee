@@ -11,7 +11,6 @@ function showtruyenthong()
 	document.getElementById('content_nav_truyenthong').style.display='block';
 }
 
-/*
 $(document).ready(function(){
 
 	$('img.img_pro1').click(function(){
@@ -37,4 +36,3 @@ $(document).ready(function(){
 
 
 });
-*/

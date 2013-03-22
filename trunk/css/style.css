@@ -9,7 +9,7 @@ table {
 fieldset,img { 
 	border:0;
 }
-address,caption,cite,code,dfn,em,strong,th,var {
+address,caption,cite,code,dfn,em,th,var {
 	font-style:normal;
 	font-weight:normal;
 }
@@ -33,11 +33,13 @@ body
 	line-height:1.5em;
 	font-size:62.5%;
 	font-family:Tahoma, Arial,times new roman;
+	background:#672b04;
 }
 
 #container{
 	width:100%; height:auto;
 	margin:0 auto;
+	max-width:1280px;
 }
 
 #header{
@@ -50,40 +52,41 @@ body
 #ctn_head{width:970px; height:auto; margin:0 auto}
 p.logo{width:135px; height:125px; padding-top:15px; float:left}
 
-p.menu_trangchu{float:left; margin-left:40px; margin-top:47px}
-p.menu_trangchu img{width:85px}
+p.menu_trangchu{float:left; margin-left:40px; margin-top:40px; width:125px; text-align:center}
+p.menu_trangchu img{width:92px}
 p.menu_trangchu a{
 	font-size:19px; color:#C19400; text-decoration:none;
-	position:relative; top:-60px; left:-30px
+	position:relative; top:-94px;
 }
 
-p.menu_gioithieu{float:left; margin-left:-40px; margin-top:35px}
+p.menu_gioithieu{float:left; margin-top:35px; width:125px; text-align:center; margin-left:42px}
 p.menu_gioithieu img{width:120px}
 p.menu_gioithieu a{
 	font-size:19px; color:#C19400; text-decoration:none;
-	position:relative; top:-80px; left:-30px
+	position:relative; top:-115px;
 }
 
 
-p.menu_sanpham{float:left; margin-left:-33px; margin-top:47px}
-p.menu_sanpham img{width:85px}
+
+p.menu_sanpham{float:left; margin-top:40px; width:125px; text-align:center; margin-left:42px}
+p.menu_sanpham img{width:92px}
 p.menu_sanpham a{
 	font-size:19px; color:#C19400; text-decoration:none;
-	position:relative; top:-60px; left:-30px
+	position:relative; top:-94px;
 }
 
-p.menu_tuyendung{float:left; margin-left:-40px; margin-top:35px}
+p.menu_tuyendung{float:left; margin-top:35px; width:125px; text-align:center; margin-left:42px}
 p.menu_tuyendung img{width:120px}
 p.menu_tuyendung a{
 	font-size:19px; color:#C19400; text-decoration:none;
-	position:relative; top:-80px; left:-30px
+	position:relative; top:-115px;
 }
 
-p.menu_lienhe{float:left; margin-left:-33px; margin-top:47px}
-p.menu_lienhe img{width:85px}
+p.menu_lienhe{float:left; margin-top:40px; width:125px; text-align:center; margin-left:42px}
+p.menu_lienhe img{width:92px}
 p.menu_lienhe a{
 	font-size:19px; color:#C19400; text-decoration:none;
-	position:relative; top:-60px; left:-30px
+	position:relative; top:-94px;
 }
 
 
@@ -104,6 +107,13 @@ p.menu_lienhe a{
 	width:100%; height:100%; 	
 }
 
+#banner2{width:100%; height:50px; margin:0 auto; margin-top:-20px }
+
+#banner2 img{
+	width:100%; height:100%; 	
+}
+
+
 #ctn_content{
 	width:100%; height:1120px;
 	background:url(../images/bg_content.png) repeat-x;
@@ -118,7 +128,7 @@ p.menu_lienhe a{
 }
 
 #content_left{
-	width:315px; height:1000px;
+	width:315px; height:1020px;
 	float:left;
 	background:white;
 	border-radius:5px;
@@ -131,19 +141,38 @@ p.menu_lienhe a{
 #hotline div.number_hotline ul li{font-size:15px; font-weight:bold; margin-bottom:15px}
 
 
-#join_facebook{width:100%; height:500px; margin-left:-4px; margin-top:15px}
+#join_facebook{width:100%; height:435px; margin-left:-4px; margin-top:15px}
 .header_join_fb{
-	width:100%; height: 53px;
-	background:url(../images/joinfb.png) no-repeat;
+	width:100%; height: 35px;
+	background:url(../images/bg_title_left.png) no-repeat;
+	color:#FFF; font-weight:bold; font-size:17px;
+	padding-top:16px;
+	padding-left:10px;
+	margin-bottom:5px;
 }
 
-.ct_join_fb{width:300px; height:790px; padding-left:11px}
+.ct_join_fb{width:300px; padding-left:11px}
 
 
+#relative_post{width:100%; height:422px; margin-left:-4px; margin-top:15px}
 
-
-
-
+.header_rel_post{
+	width:100%; height: 35px;
+	background:url(../images/bg_title_left.png) no-repeat;
+	color:#FFF; font-weight:bold; font-size:17px;
+	padding-top:16px;
+	padding-left:10px;
+	margin-bottom:5px;
+}
+.ct_rel_post{width:294px; height:364px; margin-left:11px; padding-left:5px; overflow:auto; border:1px solid #AAAAAA}
+ul.ul_ct_rel_post li{height:70px; border-bottom:1px dashed #631800; padding-top:5px;}
+ul.ul_ct_rel_post li:last-child{border-bottom:none}
+ul.ul_ct_rel_post li a{
+	color:#631800;
+	font-size:14px;
+	line-height:20px;text-decoration:none;
+}
+ul.ul_ct_rel_post li a:hover{text-decoration:underline}
 
 
 
@@ -163,8 +192,154 @@ p.menu_lienhe a{
 #content_right #baiviet{
 	width:630px; height:475px;
 	background:url(../images/bg_content_right.jpg) no-repeat;
-	margin-top:50px
+	margin-top:42px
 }
+
+
+
+h1.title_cat{
+	color:#4b0a00;
+	font-size:20px;
+	font-weight:bold;
+	line-height:30px;
+}
+
+ul.ul_content_cat li{
+	height:145px;
+	margin-top:15px;
+	border-bottom:1px dashed #631800;
+}
+ul.ul_content_cat li:last-child{border-bottom:none}
+ul.ul_content_cat li p.img_child_cat
+{
+	width: 200px; height:130px;
+	border: 1px solid #6B382F;
+	background:white;
+	text-align:center;
+	float:left;
+	margin-right:20px;
+}
+ul.ul_content_cat li p.img_child_cat img{height:100%;}
+
+#content_right #category{
+	width:590px;
+	background:url(../images/bg_show_bv.png);
+	margin-top:40px;
+	padding:20px;
+}
+ul.ul_content_cat li a.name_child_cat
+{
+	color:#863616;
+	font-size:18px;
+	text-decoration:none;
+}
+ul.ul_content_cat li a.name_child_cat:hover{text-decoration:underline}
+ul.ul_content_cat li h4.des_child_cat
+{
+	color:#000;
+	font-size:14px;
+	text-align:justify;
+	margin-top:10px;
+	line-height:20px;
+}
+
+
+ul.ul_page{float:right; margin-top:-10px}
+ul.ul_page li{width:20px; height:20px; border:1px solid #631800; float:left; margin-right:1px; text-align:center;
+	font-size:12px; font-weight:bold; text-decoration:none; color:#631800;
+}
+
+ul.ul_page li:hover{
+	border:1px solid red;
+	color:red;
+}
+.page_active{border:1px solid red !important;color:red !important;}
+
+
+
+#content_right #detail_product{
+	width:590px;
+	background:url(../images/bg_show_bv.png);
+	margin-top:40px;
+	padding:20px;
+	display:inline-block;
+}
+
+h1.title_product{
+	color:#4b0a00;
+	font-size:20px;
+	font-weight:bold;
+	line-height:30px;
+}
+
+
+
+.hinhanhsanpham{width:300px; height:430px; float:left; margin-top:20px; margin-right:20px;}
+p.img_product{width:100%; height:300px; background:white; text-align:center; border:1px solid #999}
+p.img_product img{height:100%; max-width:300px;}
+ul.ul_img_product{margin-top:20px; margin-left:3px;}
+ul.ul_img_product li{width:70px; height:80px; background:white; float:left; margin-right:2px; border:1px solid #999}
+ul.ul_img_product li:last-child{margin-right:0px;}
+ul.ul_img_product li:hover{border:1px solid #631800}
+ul.ul_img_product li img{height:100%; max-width:70px;}
+
+.thongtinsanpham{width:270px; height:430px; float:left; margin-top:20px}
+.price_pro{color:#EC1C25; font-weight:bold; font-size:15px;}
+
+.baivietsanpham{width:630px; height:500px; margin-left:-20px; float:left; //background:white; //border:1px solid #999; 
+	font-size:12px; line-height:20px;
+}
+
+.text1{
+	color:#4B0A00;
+	font-weight:bold;
+	font-size:17px;
+	margin-top:20px;
+	margin-bottom:5px;
+}
+
+.des_pro{
+	font-size:12px;
+	line-height:20px;
+}
+
+.detail_pro{
+	font-size:12px;
+	line-height:20px;
+}
+
+
+
+
+#content_right #detail_post{
+	width:610px;
+	background:url(../images/bg_show_bv.png);
+	margin-top:40px;
+	padding:20px 0px 20px 20px;
+	height:980px;
+}
+h1.title_detal_post{
+	color:#4b0a00;
+	font-size:20px;
+}
+
+.content_detail_post{
+	padding:10px 0px 20px;
+	height:920px;
+	width:630px;
+	margin-left:-20px;
+	//overflow:auto;
+	font-size:15px;
+	line-height:25px;
+	text-align:justify;
+	//background:url('../images/bg_detal_post.png');
+	margin-top:10px;
+}
+
+p.link_nav{margin-top:10px;}
+p.link_nav a{color:#333; text-decoration:none; font-size:12px;}
+p.link_nav a:hover{text-decoration:underline}
+
 
 div.main_nav{width:378px; height:51px; background:url(../images/bg_title.jpg); float:left; margin-top:30px; margin-left:30px}
 
@@ -237,12 +412,12 @@ p.lycf img{width:100%; height:100%}
 
 
 #library{
-	width:100%; height:550px; background:white;	
+	width:100%; //height:550px; background:white; padding-bottom:20px;	
 }
 
 .video{width:970px; height:320px; margin:0 auto; padding-top:30px}
 .display_video{width:500px; height:100%; float:left}
-.list_video{width:440px; height:100%; //background:#CC6; float:right; overflow:auto}
+.list_video{width:440px; height:318px; //background:#CC6; float:right; overflow:auto; border:1px solid #000}
 
 .list_video ul.ul_list_video li{
 	width:100%;
@@ -259,9 +434,12 @@ p.lycf img{width:100%; height:100%}
 {
 	float:left;
 	font-size:13px;
-	width:250px;
-	margin-left:15px;margin-top:25px;
+	width:275px;
+	margin-left:15px;margin-top:5px;
 }
+.des_video{font-size:12px; color:#631800; width:275px; float:left; margin-top:5px; margin-left:15px;}
+
+
 
 .list_video ul.ul_list_video p.name_video a
 {
@@ -293,7 +471,7 @@ p.lycf img{width:100%; height:100%}
 	position:relative;
 }
 
-#ct_footer img.logo{width:270px}
+#ct_footer img.logo{width:270px; height:250px}
 #ct_footer p.text_footer1{color:#FE0202; font-size:25px; font-weight:bold; margin-bottom:25px; margin-top:50px;
 	text-shadow: -2px 2px #989898;
 }
@@ -309,8 +487,10 @@ p.lycf img{width:100%; height:100%}
 
 
 
-
-
+.googlemap{width:588px; height:500px; border:1px solid #aaa; margin-top:20px;}
+.thongtinlienhe{width:588px; height:408px; margin-top:20px;
+	font-size:13px; line-height:20px
+}
 
 
 

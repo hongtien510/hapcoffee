@@ -1,24 +1,15 @@
-	<div id="tintuc">
-		<p class="phincf"><img src="images/phincf.png" alt="PhinCF" title="Cafe HAP" /></p>
-		<div class="main_nav">
-			<ul class="ul_main_nav">
-				<li><a  href="javascript:;">TUYỂN DỤNG</a></li>
-			</ul>
-		</div>
-		<div style="clear:both"></div>
-		
-		<!--Noi dung Tab tin tuc-->
-		<div id="content_nav_tintuc">
+<div id="detail_post">
+	<h1 class="title_detal_post">TUYỂN DỤNG</h1>
+	<p class="link_nav">
+		<a href="trangchu.html">Home</a>
+		 &raquo; 
+		<a href="tuyendung.html">Tuyển dụng</a></p>
 
-			<div id="top_nav">
-
-				<div class="ct_top_nav">
-					<?php
+		<div class="content_detail_post">
+			<div id="jp-container" class="jp-container">
+				<?php
 					include('Modules/TuyenDung/TuyenDung_content.php');
-					?>
-				</div>
+				?>
 			</div>
-
-		</div>            
-                 
-	</div>
+		</div>
+</div>

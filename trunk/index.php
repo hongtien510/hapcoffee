@@ -2,20 +2,73 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/jquery.simplyscroll.css" />
 
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>   
+
+<!--Show Hinh Anh-->
+<link rel="stylesheet" type="text/css" href="css/jquery.simplyscroll.css" />
+<script type="text/javascript" src="js/jquery.simplyscroll.js"></script>
+<!--End Show Hinh Anh-->
+
+<!-- Light box-->
 <link id="theme" href="images/themes/sunny/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css">
 <link href="css/lightbox.min.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-
-<script type="text/javascript" src="js/jquery.simplyscroll.js"></script>
-
 <script type="text/javascript" src="js/lightbox/jquery.ui.core.min.js"></script>
 <script type="text/javascript" src="js/lightbox/jquery.ui.widget.min.js"></script>
 <script type="text/javascript" src="js/lightbox/jquery.ui.rlightbox.js"></script>   
-<script type="text/javascript" src="js/main.js"></script>   
+<!-- End Light box-->
+
+
+<!--Show Hinh Anh-->
+<script type="text/javascript">
+	jQuery.noConflict();
+	(function($){
+		$(document).ready(function(){
+		
+		 $("#scroller").simplyScroll({
+				autoMode: 'loop'
+			});
+		});
+	
+	})(jQuery);
+</script>
+
+<!--Light Box-->
+<script type="text/javascript">
+	jQuery(function($) {
+		var $chosenSheet,
+		$stylesheets = $( "a[id^=theme-]" );
+		
+		// theme switcher
+		$stylesheets.click(
+		function() {
+			$chosenSheet = $( this ).attr( "href" );
+			$( "#theme").attr( "href", $chosenSheet );
+			
+			// mark this A as an active
+			$stylesheets.removeClass( "active" );
+			$( this ).addClass( "active" );
+			return false;
+		}
+		);
+		// run rlightbox
+		$( ".lb" ).rlightbox();
+		$( ".lb_title-overwritten" ).rlightbox({overwriteTitle: true});
+	});
+</script>
+<script type="text/javascript" src="js/jquery.min-1.6.4.js"></script>
+
+<!--SCROLL-->
+	<link rel="stylesheet" type="text/css" href="css/scroll.css" />
+	<link rel="stylesheet" type="text/css" href="css/jscrollpane.css" />
+	
+	<script type="text/javascript" src="js/scroll/jquery.jscrollpane.min.js"></script>   
+	<script type="text/javascript" src="js/scroll/jquery.mousewheel.js"></script>   
+	<script type="text/javascript" src="js/scroll/scroll.js"></script> 
+<!--End SCROLL-->
 
 <title>Hoang Anh Phat Coffee</title>
 </head>
@@ -69,10 +122,29 @@ include('libs/hamhaydung.php');
 				include('Modules/hotro/dienthoai.php');
 				?>
                 <div id="join_facebook">
+				<!--
                 	<div class="header_join_fb"></div>
                     <div class="ct_join_fb">
                     	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FIshaLi.Advertising.Media&amp;width=300&amp;height=800&amp;show_faces=false&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:800px;" allowTransparency="true"></iframe>
                     </div>
+				-->
+				<div id="join_facebook">
+                	<div class="header_join_fb">JOIN US ON FACEBOOK</div>
+                    <div class="ct_join_fb">
+                    	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FIshaLi.Advertising.Media&amp;width=300&amp;height=370&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:370px;" allowTransparency="true"></iframe>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div id="relative_post">
+                <?php
+				include('Modules/baivietlienquan/baivietlienquan.php');
+				?>
+                </div>
+					
+              
+				
                 </div>
             </div><!--End #content_left-->
         	<div id="content_right">
