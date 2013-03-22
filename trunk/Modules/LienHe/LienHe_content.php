@@ -1,37 +1,4 @@
-﻿<?php
-if(isset($_GET['mabv'])) 
-{
-$mabv = $_GET['mabv'];
-}
-else
-{
-$mabv =125;
-}
-
-
-
-if(isset($mabv)) 
-{
-// chi tiet gioi thieu
-	$sql="select *  from baiviet where anhien=0 AND mabv=".$mabv;
-	$query=mysql_query($sql);
-	
-	while($row=mysql_fetch_array($query))
-	{
-		//echo "<h2>".$row['tenbaiviet']."</h2>";
-		echo $row['noidung'];
-	}
-	
-	?>
-	
-	<?php //echo buttonfooter() ?>
-	
-<?php
-}	
-?>
-
-
-
+﻿
 <!-- form gửi mail liên hẹ -->
 
 <script language="javascript">
