@@ -16,61 +16,41 @@ if(isset($mabv))
 		while($row=mysql_fetch_array($query))
 		{	
 		?>
-			<div id="tintuc">
-					<p class="phincf"><img src="images/phincf.png" alt="PhinCF" title="Cafe HAP" /></p>
-					<div class="main_nav">
-						<ul class="ul_main_nav">
-							<li><a  href="javascript:;"><?php echo $row['tenbaiviet']?></a></li>
-						</ul>
-					</div>
-					<div style="clear:both"></div>
-					
-					<!--Noi dung Tab tin tuc-->
-					<div id="content_nav_tintuc">
+		<div id="detail_post">
+			<h1 class="title_detal_post"><?php echo $row['tenbaiviet']?></h1>
+			<p class="link_nav">
+				<a href="trangchu.html">Home</a>
+				 &raquo; 
+				<a href="javascript:;"><?php echo $row['tenbaiviet']?></a></p>
 
-						<div id="top_nav">
-
-							<div class="ct_top_nav">
-								<?php
+				<div class="content_detail_post">
+					<div id="jp-container" class="jp-container">
+						<?php
 									echo $row['noidung'];
-									echo "<br/>";
-									echo buttonfooter(); 
-								?>
-							</div>
-								 
-						</div>
-
-					</div>            
-					 
-			</div>
+									// echo "<br/>";
+									// echo buttonfooter(); 
+						?>
+					</div>
+				</div>
+		</div>
 		
 	<?php
 		}
 	}else
 	{
 	?>
-	<div id="tintuc">
-				<p class="phincf"><img src="images/phincf.png" alt="PhinCF" title="Cafe HAP" /></p>
-				<div class="main_nav">
-					<ul class="ul_main_nav">
-						<li><a  href="javascript:;">Bài viết này không tồn tại</a></li>
-					</ul>
-				</div>
-				<div style="clear:both"></div>
-				
-				<!--Noi dung Tab tin tuc-->
-				<div id="content_nav_tintuc">
+		<div id="detail_post">
+			<h1 class="title_detal_post">Bài viết này không tồn tại</h1>
+			<p class="link_nav">
+				<a href="trangchu.html">Home</a>
+				 &raquo; 
+				<a href="javascript:;">Bài viết này không tồn tại</a></p>
 
-					<div id="top_nav">
-
-						<div class="ct_top_nav">
-							Xin lỗi! có thể bài viết này đã bị xóa..Nếu có vấn đề gì vui lòng liên hệ quản trị
-						</div>
-							 
+				<div class="content_detail_post">
+					<div id="jp-container" class="jp-container">
+					Xin lỗi! có thể bài viết này đã bị xóa..Nếu có vấn đề gì vui lòng liên hệ quản trị
 					</div>
-
-				</div>            
-				 
+				</div>
 		</div>
 	<?php
 	}

@@ -47,7 +47,7 @@ $pagesstart = ceil($page-$offset);
 $pagesend = ceil($page+$offset);
 if ($page != "1" && ceil($numofpages) != "0")
 {
-echo str_replace('%d_pg', ceil($page-1), "<a href=\"$link\"><b>Pre</b></a>&nbsp;");
+echo str_replace('%d_pg', ceil($page-1), "<a href=\"$link\"><li>&lt;</li></a>&nbsp;");
 }
 for($i = 1; $i <= $numofpages; $i++)
 {
@@ -55,11 +55,11 @@ if ($pagesstart <= $i && $pagesend >= $i)
 {
 if ($i == $page)
 {
-		echo "<b>[$i]</b>&nbsp;";
+		echo "<li class='page_active'>$i</li>&nbsp;";
 }
 else
 {
-echo str_replace('%d_pg', "$i", '<a href="'.$link.'"><b>'.$i.'</b></a>&nbsp; ');
+echo str_replace('%d_pg', "$i", '<a href="'.$link.'"><li>'.$i.'</li></a>&nbsp; ');
 }
 }
 }
@@ -69,7 +69,7 @@ if (ceil($numofpages) == "0")
 }
 if ($page != ceil($numofpages) && ceil($numofpages) != "0")
 {
-echo str_replace('%d_pg', ceil($page+1), '<a href="'.$link.'"><b>Next</b></a>');
+echo str_replace('%d_pg', ceil($page+1), '<a href="'.$link.'"><li>&gt;</li></a>');
 }
 }
 }
