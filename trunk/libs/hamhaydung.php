@@ -104,5 +104,17 @@ function GetMaxSTT($table)
 }
 
 
+function cut_string($str, $len) {
+    $str = trim($str);
+    if (strlen($str) <= $len) 
+    	return $str;
+    $str = substr($str, 0, $len);
+    if ($str != "") {
+        if (!substr_count($str, " ")) return $str." ...";
+        while (strlen($str) && ($str[strlen($str) - 1] != " ")) $str = substr($str, 0, -1);
+        $str = substr($str, 0, -1). " ...";
+    }
+    return $str;
+}
 
 ?>
