@@ -16,26 +16,23 @@
 				<?php
 					//$sql="select *  from video where anhien=0 order by thutu";
 					// $query=mysql_query($sql);
-					$i = 1;
-					
-					while($row=mysql_fetch_array($query))		
+					$sql="SELECT *  FROM video WHERE anhien=0 ORDER BY thutu";
+					$rs=mysql_query($sql);
+					while($row=mysql_fetch_assoc($rs))
 					{
-						// echo "<tr bgcolor=\"#ffffff\" onmouseout=\"this.style.backgroundColor='#ffffff';\" title=\" Xem Video \" onclick=\"getvideo('$row[urlvideo]')\" onmouseover=\"this.style.backgroundColor='#CCCCCC';this.style.cursor='hand';\" style=\"background-color: rgb(255, 255, 255);\">";
-						// echo "<td width=10% >".$i."</td>";			
-						// echo "<td width=90% >".$row['tieude']."</td>";		
-						// echo "</tr>";
-						?>
+				?>
 						<li>
-							<img class="img_video" src="images/dnvnv.JPG" alt="<?php echo $row['tieude']?>" title="<?php echo $row['tieude']?>" />
+							<a  onclick="getvideo('<?php echo $row[urlvideo]?>')" href="javascript:;">
+								<img class="img_video" src="images/youtube.jpg" alt="<?php echo $row['tieude']?>" title="<?php echo $row['tieude']?>" />
+							</a>
 							<p class="name_video">
 								<a  onclick="getvideo('<?php echo $row[urlvideo]?>')" href="javascript:;"> <?php echo $row['tieude']?></a>
 							</p>
+							<p class="des_video">Thương hiệu cà phê Hoàng Anh Phát được phát triển trên sự kế nghiệp gia đình ở Tp Ban Mê Thuột.</p>
 						</li>
-						<?php
-						$i++;
+				<?php
 					}
-
 				?>                	
                 </ul>
             </div>
-        </div>
+</div>
