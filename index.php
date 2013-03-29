@@ -115,6 +115,15 @@ include('libs/hamhaydung.php');
     <div id="banner">
     	<img src="images/banner.jpg" alt="Banner" title="Banner"  />
     </div><!--End #banner-->
+    
+    <div id="show_product">
+			<p class="pro_first" id="product1"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+			<p id="product2"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+			<p id="product3"><a href=""><img src="images/cf3.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+			<p id="product4"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+			<p id="product5"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+	</div>
+    
     <div id="ctn_content">
     	<div id="content">
     		<div id="content_left">
@@ -131,7 +140,7 @@ include('libs/hamhaydung.php');
 				<div id="join_facebook">
                 	<div class="header_join_fb">JOIN US ON FACEBOOK</div>
                     <div class="ct_join_fb">
-                    	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FIshaLi.Advertising.Media&amp;width=300&amp;height=370&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:370px;" allowTransparency="true"></iframe>
+                    	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhoanganhphatcoffee&amp;width=290&amp;height=370&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:290px; height:370px;" allowTransparency="true"></iframe>
                         
                         
                     </div>

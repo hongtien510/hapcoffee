@@ -13,6 +13,45 @@ function showtruyenthong()
 
 $(document).ready(function(){
 
+	$("#product1").mouseover(function(e) {
+		$("#product1").animate({top:"-160px"});
+	});
+	$("#product1").mouseout(function() {
+		$("#product1").animate({top:"-100px"});
+	});
+	
+	$("#product2").mouseover(function(e) {
+		$("#product2").animate({top:"-160px"});
+	});
+	$("#product2").mouseout(function() {
+		$("#product2").animate({top:"-100px"});
+	});
+	
+	$("#product3").mouseover(function(e) {
+		$("#product3").animate({top:"-160px"});
+	});
+	$("#product3").mouseout(function() {
+		$("#product3").animate({top:"-100px"});
+	});
+	
+	$("#product4").mouseover(function(e) {
+		$("#product4").animate({top:"-160px"});
+	});
+	$("#product4").mouseout(function() {
+		$("#product4").animate({top:"-100px"});
+	});
+	
+	$("#product5").mouseover(function(e) {
+		$("#product5").animate({top:"-160px"});
+	});
+	$("#product5").mouseout(function() {
+		$("#product5").animate({top:"-100px"});
+	});
+
+
+
+
+
 	$('img.img_pro1').click(function(){
 		var source = $('img.img_pro1').attr("src");
 		//alert (source);

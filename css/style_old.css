@@ -89,16 +89,23 @@ p.menu_lienhe a{
 	position:relative; top:-94px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 #banner{width:100%; height:auto; margin:0 auto; margin-top:-20px }
 
 #banner img{
 	width:100%; height:100%; 	
 }
-
-#show_product{width:970px; margin:0 auto; position:absolute; margin-left:150px;}
-#show_product p{float:left; width:100px; height:175px; //margin-top:-100px; margin-left:50px; position:relative; top:-100px;}
-#show_product p.pro_first{margin-left:125px; position:relative}
-
 
 #banner2{width:100%; height:50px; margin:0 auto; margin-top:-20px }
 
@@ -111,8 +118,7 @@ p.menu_lienhe a{
 	width:100%; height:1120px;
 	background:url(../images/bg_content.png) repeat-x;
 	margin:-10px auto;
-	position:relative;
-	clear:both
+	position:relative
 }
 
 #content{
@@ -158,7 +164,7 @@ p.menu_lienhe a{
 	padding-left:10px;
 	margin-bottom:5px;
 }
-.ct_rel_post{width:283px; height:364px; margin-left:20px; padding-left:5px; overflow:auto; border:1px solid #AAAAAA}
+.ct_rel_post{width:290px; height:364px; margin-left:17px; padding-left:5px; overflow:auto; border:1px solid #AAAAAA}
 ul.ul_ct_rel_post li{height:70px; border-bottom:1px dashed #631800; padding-top:5px;}
 ul.ul_ct_rel_post li:last-child{border-bottom:none}
 ul.ul_ct_rel_post li a{
@@ -398,8 +404,7 @@ p.lycf img{width:100%; height:100%}
 #content_nav_tintuc{width:505px; height:280px;
 	background:url(../images/bg_show_bv.png);
 	margin-top:10px; margin-left:30px;
-	padding:30px;
-	position:relative;
+	padding:30px
 }
 
 #content_nav_truyenthong{display:none}
@@ -486,9 +491,9 @@ p.lycf img{width:100%; height:100%}
 .thongtinlienhe{width:588px; height:408px; margin-top:20px;
 	font-size:13px; line-height:20px
 }
-p.xem_them{float:right; position:absolute; right:15px; bottom:10px;}
-p.xem_them a{color:#0090B9; text-decoration:none; font-size:13px; }
-p.xem_them a:hover{text-decoration:underline}
+
+
+
 
 
 
