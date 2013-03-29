@@ -41,6 +41,7 @@
 							?>
                             </ul>
                         </div>
+						<p class="xem_them"><a href="">Xem thêm &raquo;</a></p>
                     </div>
                     
                     <!--Noi dung Tab truyen thong-->
@@ -76,6 +77,7 @@
 								?>
                             </ul>
                         </div>
+						<p class="xem_them"><a href="">Xem thêm &raquo;</a></p>
                     </div>
                 </div>
 				
@@ -119,5 +121,6 @@
 								?>
                             </ul>
                         </div>
+						<p class="xem_them"><a href="">Xem thêm &raquo;</a></p>
                     </div>
                 </div><!--End #baiviet-->

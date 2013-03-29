@@ -61,14 +61,6 @@
 </script>
 <script type="text/javascript" src="js/jquery.min-1.6.4.js"></script>
 
-<!--SCROLL-->
-	<link rel="stylesheet" type="text/css" href="css/scroll.css" />
-	<link rel="stylesheet" type="text/css" href="css/jscrollpane.css" />
-	
-	<script type="text/javascript" src="js/scroll/jquery.jscrollpane.min.js"></script>   
-	<script type="text/javascript" src="js/scroll/jquery.mousewheel.js"></script>   
-	<script type="text/javascript" src="js/scroll/scroll.js"></script> 
-<!--End SCROLL-->
 
 <title>Hoang Anh Phat Coffee</title>
 </head>
@@ -112,17 +104,33 @@ include('libs/hamhaydung.php');
             
         </div>
     </div><!--End #header-->
-    <div id="banner">
-    	<img src="images/banner.jpg" alt="Banner" title="Banner"  />
-    </div><!--End #banner-->
-    
-    <div id="show_product">
-			<p class="pro_first" id="product1"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-			<p id="product2"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-			<p id="product3"><a href=""><img src="images/cf3.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-			<p id="product4"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-			<p id="product5"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-	</div>
+	
+	
+	
+	<?php
+		if($_GET['action']=="TrangChu")
+		{
+	?>
+		<div id="banner">
+			<img src="images/banner.jpg" alt="Banner" title="Banner"  />
+		</div><!--End #banner-->
+		
+		<div id="show_product">
+				<p class="pro_first" id="product1"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+				<p id="product2"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+				<p id="product3"><a href=""><img src="images/cf3.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+				<p id="product4"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+				<p id="product5"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+		</div>
+		
+	<?php 
+		} 
+		else{
+	?>
+		<div id="banner2">
+			<img src="images/bg_bn.jpg" alt="Banner" title="Banner"  />
+		</div><!--End #banner-->
+	<?php } ?>
     
     <div id="ctn_content">
     	<div id="content">
@@ -131,29 +139,18 @@ include('libs/hamhaydung.php');
 				include('Modules/hotro/dienthoai.php');
 				?>
                 <div id="join_facebook">
-				<!--
-                	<div class="header_join_fb"></div>
-                    <div class="ct_join_fb">
-                    	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FIshaLi.Advertising.Media&amp;width=300&amp;height=800&amp;show_faces=false&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:800px;" allowTransparency="true"></iframe>
-                    </div>
-				-->
-				<div id="join_facebook">
-                	<div class="header_join_fb">JOIN US ON FACEBOOK</div>
-                    <div class="ct_join_fb">
-                    	<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhoanganhphatcoffee&amp;width=290&amp;height=370&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:290px; height:370px;" allowTransparency="true"></iframe>
-                        
-                        
-                    </div>
-                </div>
+					<div id="join_facebook">
+						<div class="header_join_fb">JOIN US ON FACEBOOK</div>
+						<div class="ct_join_fb">
+							<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhoanganhphatcoffee&amp;width=290&amp;height=370&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false&amp;appId=617277141622046" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:290px; height:370px;" allowTransparency="true"></iframe>
+						</div>
+					</div>
                 
-                <div id="relative_post">
-                <?php
-				include('Modules/baivietlienquan/baivietlienquan.php');
-				?>
-                </div>
-					
-              
-				
+					<div id="relative_post">
+						<?php
+						include('Modules/baivietlienquan/baivietlienquan.php');
+						?>
+					</div>
                 </div>
             </div><!--End #content_left-->
         	<div id="content_right">
@@ -174,16 +171,12 @@ include('libs/hamhaydung.php');
     	</div><!--End #content-->
     </div><!--End #ctn_content-->
     <div id="library">
-    	<?php
+
+		<?php
 		include('Modules/video/video_dautien.php');
 		include('Modules/photo/photo.php');
 		?>
-		
-		
-		
-		
-		
-        
+
     </div><!--End #library-->
     <div id="footer">
     	<img src="images/bg_footer.jpg" alt="footer" title="footer" />
