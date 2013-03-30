@@ -12,7 +12,7 @@
 		else {$page = $p_now;}
 		$limitvalue = $page * $pp - ($pp);
 
-		$sql="select mabv, mota, tenbaiviet  from baiviet where anhien=0 and loaibaiviet='tintuc' order by mabv DESC LIMIT $limitvalue, $pp";;
+		$sql="select mabv, mota, tenbaiviet, urlhinh  from baiviet where anhien=0 and loaibaiviet='tintuc' order by mabv DESC LIMIT $limitvalue, $pp";;
 		$query=mysql_query($sql);		
 		while($row=mysql_fetch_assoc($query))
 		{
@@ -27,7 +27,7 @@
 		}
 		else
 		{
-		$urlhinhanh = "images/hinhsanpham/khongcohinh.jpg";
+		$urlhinhanh = "images/hinhsanpham/no-image.jpg";
 		}
 	
 	?>
