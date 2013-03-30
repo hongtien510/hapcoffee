@@ -18,7 +18,13 @@
 		$link_f = ConvertUrl("?action=baiviet&mbv=$r_tintuc_f[mabv]");
 		?>
 			<div class="img_top_nav">
-				<img src="images/phongcanh.jpg" alt="" title="" />
+			<?php
+				if($r_tintuc_f['urlhinh']=="")
+					$urlhinh = 'no-image.jpg';
+				else
+					$urlhinh = $r_tintuc_f['urlhinh'];
+			?>
+				<img src="images/hinhsanpham/<?php echo $urlhinh ?>" alt="" title="" />
 			</div>
 			<div class="ct_top_nav">
 				<p class="title_top_post">
@@ -58,7 +64,13 @@
 	<div id="content_nav_truyenthong">
 		<div id="top_nav">
 			<div class="img_top_nav">
-				<img src="images/phongcanh.jpg" alt="" title="" />
+				<?php
+				if($r_truyenthong_f['urlhinh']=="")
+					$urlhinh = 'no-image.jpg';
+				else
+					$urlhinh = $r_truyenthong_f['urlhinh'];
+				?>
+				<img src="images/hinhsanpham/<?php echo $urlhinh ?>" alt="" title="" />
 			</div>
 			<div class="ct_top_nav">
 				<p class="title_top_post">
@@ -106,7 +118,13 @@
 	<div id="content_nav_baiviet">
 		<div id="top_nav">
 			<div class="img_top_nav">
-				<img src="images/phongcanh.jpg" alt="" title="" />
+				<?php
+				if($r_cuocsoncafe_f['urlhinh']=="")
+					$urlhinh = 'no-image.jpg';
+				else
+					$urlhinh = $r_cuocsoncafe_f['urlhinh'];
+				?>
+				<img src="images/hinhsanpham/<?php echo $urlhinh ?>" alt="" title="" />
 			</div>
 			<div class="ct_top_nav">
 				<p class="title_top_post">
