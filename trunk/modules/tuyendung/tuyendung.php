@@ -8,7 +8,7 @@
 		<div class="content_detail_post">
 			<div id="jp-container" class="jp-container">
 				<?php
-					include('Modules/TuyenDung/TuyenDung_content.php');
+					include('modules/tuyendung/tuyendung_content.php');
 				?>
 			</div>
 		</div>

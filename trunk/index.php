@@ -132,7 +132,7 @@ include('libs/hamhaydung.php');
 				while($row=mysql_fetch_assoc($rs))
 				{
 			?>
-				<p <?php if($i==1) echo "class='pro_first'"; ?> id="product<?php echo $i ?>"><a href="SanPham.html?idsp=<?php echo $row['masanpham']; ?>"><img src="images/hinhsanpham/<?php echo $row['urlhinh'] ?>" alt="<?php echo $row['masanpham'] ?>" title="<?php echo $row['tensanpham'] ?>"/></a></p>
+				<p <?php if($i==1) echo "class='pro_first'"; ?> id="product<?php echo $i ?>"><a href="sanpham.html?idsp=<?php echo $row['masanpham']; ?>"><img src="images/hinhsanpham/<?php echo $row['urlhinh'] ?>" alt="<?php echo $row['masanpham'] ?>" title="<?php echo $row['tensanpham'] ?>"/></a></p>
 			<?php 
 				$i++; 
 				} 
@@ -189,8 +189,8 @@ include('libs/hamhaydung.php');
     <div id="library">
 
 		<?php
-		include('Modules/video/video_dautien.php');
-		include('Modules/photo/photo.php');
+		include('modules/video/video_dautien.php');
+		include('modules/photo/photo.php');
 		?>
 
     </div><!--End #library-->
@@ -213,19 +213,19 @@ include('libs/hamhaydung.php');
                 <td height="130" valign="top">
                 	<ul class="share">
                     	<li>
-                        	<a href="http://link.apps.zing.vn/share?u=http://hoanganhphatcoffee.vn"><img src="images/share_zing.png" alt="Share Zing" title="Chia sẻ lên Zing me"</a>
+                        	<a href="http://link.apps.zing.vn/share?u=http://hoanganhphatcoffee.vn"><img src="images/share_zing.png" alt="Share Zing" title="Chia sẻ lên Zing me"/></a>
                         </li>
                         <li>
-                        	<a href="https://plus.google.com/share?url=http://hoanganhphatcoffee.vn"><img src="images/share_goolge.png" alt="Share Google" title="Chia sẻ lên Google Plus"</a>
+                        	<a href="https://plus.google.com/share?url=http://hoanganhphatcoffee.vn"><img src="images/share_goolge.png" alt="Share Google" title="Chia sẻ lên Google Plus"/></a>
                         </li>
                         <li>
-                        	<a href=""><img src="images/share_twiter.png" alt="Share Twiter" title="Chia sẻ lên Twiter"</a>
+                        	<a href=""><img src="images/share_twiter.png" alt="Share Twiter" title="Chia sẻ lên Twiter"/></a>
                         </li>
                         <li>
-                        	<a href="https://www.facebook.com/sharer/sharer.php?s=100&p[title]=Cty TNHH Hoàng Anh Phát&p[url]=http://hoanganhphatcoffee.vn%23share_button_top"><img src="images/share_facebook.png" alt="Share Facebook" title="Chia sẻ lên Facebook"</a>
+                        	<a href="https://www.facebook.com/sharer/sharer.php?s=100&p[title]=Cty TNHH Hoàng Anh Phát&p[url]=http://hoanganhphatcoffee.vn%23share_button_top"><img src="images/share_facebook.png" alt="Share Facebook" title="Chia sẻ lên Facebook"/></a>
                         </li>
                         <li>
-                        	<a href=""><img src="images/share_linkedin.png" alt="Share Linkedin" title="Chia sẻ lên Linkedin"</a>
+                        	<a href=""><img src="images/share_linkedin.png" alt="Share Linkedin" title="Chia sẻ lên Linkedin"/></a>
                         </li>
                     </ul>
                 </td>

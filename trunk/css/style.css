@@ -241,8 +241,8 @@ ul.ul_content_cat li h4.des_child_cat
 }
 
 
-ul.ul_page{position:absolute; right:0px; bottom:15px;}
-ul.ul_page li{width:20px; height:20px; border:1px solid #631800; float:left; margin-right:1px; text-align:center;
+ul.ul_page{position:absolute; right:7px; bottom:15px;}
+ul.ul_page li{width:20px; height:20px; border:1px solid #631800; float:left; margin-right:3px; text-align:center;
 	font-size:12px; font-weight:bold; text-decoration:none; color:#631800;
 }
 
