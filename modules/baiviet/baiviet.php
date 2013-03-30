@@ -21,7 +21,13 @@ if(isset($mabv))
 			<p class="link_nav">
 				<a href="trangchu.html">Home</a>
 				 &raquo; 
-				<a href="javascript:;"><?php echo $row['tenbaiviet']?></a></p>
+				<a href="<?php echo $row['loaibaiviet']?>.html">
+					<?php if($row['loaibaiviet']=='tintuc') echo 'tin tức'?>
+					<?php if($row['loaibaiviet']=='truyenthong') echo 'truyền thông'?>
+					
+				</a>
+				
+			</p>
 
 				<div class="content_detail_post">
 					<div id="jp-container" class="jp-container">
