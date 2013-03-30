@@ -122,7 +122,7 @@ p.menu_lienhe a{
 }
 
 #content_left{
-	width:315px; height:1020px;
+	width:315px; height:1021px;
 	float:left;
 	background:white;
 	border-radius:5px;
@@ -199,8 +199,8 @@ h1.title_cat{
 }
 
 ul.ul_content_cat li{
-	height:145px;
-	margin-top:15px;
+	height:142px;
+	margin-top:10px;
 	border-bottom:1px dashed #631800;
 }
 ul.ul_content_cat li:last-child{border-bottom:none}
@@ -220,12 +220,15 @@ ul.ul_content_cat li p.img_child_cat img{height:100%;}
 	background:url(../images/bg_show_bv.png);
 	margin-top:40px;
 	padding:20px;
+	height:982px;
+	position:relative;
 }
 ul.ul_content_cat li a.name_child_cat
 {
 	color:#863616;
 	font-size:18px;
 	text-decoration:none;
+	line-height:20px;
 }
 ul.ul_content_cat li a.name_child_cat:hover{text-decoration:underline}
 ul.ul_content_cat li h4.des_child_cat
@@ -238,7 +241,7 @@ ul.ul_content_cat li h4.des_child_cat
 }
 
 
-ul.ul_page{float:right; margin-top:-10px}
+ul.ul_page{position:absolute; right:0px; bottom:15px;}
 ul.ul_page li{width:20px; height:20px; border:1px solid #631800; float:left; margin-right:1px; text-align:center;
 	font-size:12px; font-weight:bold; text-decoration:none; color:#631800;
 }
@@ -315,11 +318,12 @@ ul.ul_img_product li img{height:100%; max-width:70px;}
 h1.title_detal_post{
 	color:#4b0a00;
 	font-size:20px;
+	line-height:25px;
 }
 
 .content_detail_post{
 	padding:10px 0px 20px;
-	height:920px;
+	height:845px;
 	width:630px;
 	margin-left:-20px;
 	//overflow:auto;
@@ -413,7 +417,7 @@ p.lycf img{width:100%; height:100%}
 }
 
 .video{width:970px; height:320px; margin:0 auto; padding-top:30px}
-.display_video{width:500px; height:100%; float:left}
+.display_video{width:500px; height:100%; float:left;}
 .list_video{width:440px; height:318px; //background:#CC6; float:right; overflow:auto; border:1px solid #000}
 
 .list_video ul.ul_list_video li{

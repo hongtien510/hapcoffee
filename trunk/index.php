@@ -61,6 +61,15 @@
 </script>
 <script type="text/javascript" src="js/jquery.min-1.6.4.js"></script>
 
+<!--SCROLL-->
+	<link rel="stylesheet" type="text/css" href="css/scroll.css" />
+	<link rel="stylesheet" type="text/css" href="css/jscrollpane.css" />
+	
+	<script type="text/javascript" src="js/scroll/jquery.jscrollpane.min.js"></script>   
+	<script type="text/javascript" src="js/scroll/jquery.mousewheel.js"></script>   
+	<script type="text/javascript" src="js/scroll/scroll.js"></script> 
+<!--End SCROLL-->
+
 
 <title>Hoang Anh Phat Coffee</title>
 </head>
@@ -83,23 +92,23 @@ include('libs/hamhaydung.php');
         	</p>
             <p class="menu_trangchu">
             	<img src="images/lycf_menu.png" alt="Trang chủ" title="Trang chủ" />
-                <a href="TrangChu.html">Trang chủ</a>
+                <a href="trangchu.html">Trang chủ</a>
             </p>
             <p class="menu_gioithieu">
             	<img src="images/lycf_menu.png" alt="Trang chủ" title="Trang chủ" />
-                <a href="GioiThieu.html">Giới thiệu</a>
+                <a href="gioithieu.html">Giới thiệu</a>
             </p>
             <p class="menu_sanpham">
             	<img src="images/lycf_menu.png" alt="Trang chủ" title="Trang chủ" />
-                <a href="SanPham.html">Sản phẩm</a>
+                <a href="sanpham.html">Sản phẩm</a>
             </p>
             <p class="menu_tuyendung">
             	<img src="images/lycf_menu.png" alt="Trang chủ" title="Trang chủ" />
-                <a href="TuyenDung.html">Tuyển dụng</a>
+                <a href="tuyendung.html">Tuyển dụng</a>
             </p>
             <p class="menu_lienhe">
             	<img src="images/lycf_menu.png" alt="Trang chủ" title="Trang chủ" />
-                <a href="LienHe.html">Liên hệ</a>
+                <a href="lienhe.html">Liên hệ</a>
             </p>
             
         </div>
@@ -108,7 +117,7 @@ include('libs/hamhaydung.php');
 	
 	
 	<?php
-		if($_GET['action']=="TrangChu")
+		if($_GET['action']=="trangchu" || $_GET['action']=="")
 		{
 	?>
 		<div id="banner">
@@ -116,11 +125,26 @@ include('libs/hamhaydung.php');
 		</div><!--End #banner-->
 		
 		<div id="show_product">
+			<?php
+				$sql = "Select masanpham, tensanpham, urlhinh from sanpham where anhien=0 order by thutu";
+				$rs=mysql_query($sql);
+				$i=1;
+				while($row=mysql_fetch_assoc($rs))
+				{
+			?>
+				<p <?php if($i==1) echo "class='pro_first'"; ?> id="product<?php echo $i ?>"><a href="SanPham.html?idsp=<?php echo $row['masanpham']; ?>"><img src="images/hinhsanpham/<?php echo $row['urlhinh'] ?>" alt="<?php echo $row['masanpham'] ?>" title="<?php echo $row['tensanpham'] ?>"/></a></p>
+			<?php 
+				$i++; 
+				} 
+			?>
+			
+		<!--
 				<p class="pro_first" id="product1"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
 				<p id="product2"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
 				<p id="product3"><a href=""><img src="images/cf3.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
 				<p id="product4"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
 				<p id="product5"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
+		-->
 		</div>
 		
 	<?php 
@@ -136,7 +160,7 @@ include('libs/hamhaydung.php');
     	<div id="content">
     		<div id="content_left">
             	<?php
-				include('Modules/hotro/dienthoai.php');
+				include('modules/hotro/dienthoai.php');
 				?>
                 <div id="join_facebook">
 					<div id="join_facebook">
@@ -148,7 +172,7 @@ include('libs/hamhaydung.php');
                 
 					<div id="relative_post">
 						<?php
-						include('Modules/baivietlienquan/baivietlienquan.php');
+						include('modules/baivietlienquan/baivietlienquan.php');
 						?>
 					</div>
                 </div>
@@ -161,10 +185,10 @@ include('libs/hamhaydung.php');
 					}
 					else
 					{
-					$Action='TrangChu';
+					$Action='trangchu';
 					}
 					// echo "noidung san pham-----".$_GET['action'];
-					include('Modules/'.$Action.'/'.$Action.'.php');
+					include('modules/'.$Action.'/'.$Action.'.php');
 					?>					
             	
             </div><!--End #content_right-->
