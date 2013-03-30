@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hoàng Anh Phát</title>
-<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="css/style_admin.css" />
 <link rel="stylesheet" type="text/css" media="all" href="css/jsDatePick_ltr.min.css" />
 
 
@@ -43,7 +43,8 @@
 	</div><!--End .banner-->
 	
 	 <?php 
-	if(!isset($_SESSION['HoTenAdmin'])){
+	// if(!isset($_SESSION['HoTenAdmin'])){
+	if(isset($_SESSION['HoTenAdmin'])){
 		
 		include('Admin/Modules/DangNhap.php');
 	}
@@ -52,29 +53,45 @@
 	?>
     <div class="menu_top">
 			<ul>
-				<li><a href="javascript:;">Sản phẩm</a>
+				<li><a href="?action=SanPham">Sản phẩm</a>
 					<ul>
+					<!--
 						<li><a href="?action=LoaiSanPham">Loại sản phẩm</a></li>
+					
 						<li><a href="?action=SanPham">Sản phẩm</a></li>
+					-->
 					</ul>
 				</li>
+				<!--
 				<li><a href="javascript:;">Thông tin</a>
 					<ul>
 						<li><a href="?action=ThongTinChinh">Thông tin chính</a></li>
 						<li><a href="?action=ThongTinPhu">Thông tin phụ</a></li>
 					</ul>
 				</li>
-				<li><a href="?action=GioiThieu">Giới thiệu</a></li>
+				-->
+				<li><a href="javascript:;">Bài viết</a>
+					<ul>
+						<li><a href="?action=GioiThieu">Giới thiệu</a></li>					
+						<li><a href="?action=GioiThieu&lbv=truyenthong">Truyền thông</a></li>
+						<li><a href="?action=GioiThieu&lbv=tintuc">Tin tức</a></li>
+						<li><a href="?action=GioiThieu&lbv=cuocsoncafe">Cuộc sống cafe</a></li>
+					</ul>
+				</li>
+				<!--
 				<li><a href="?action=PhanPhoi">Phân phối</a></li>
+				-->
 				<li><a href="?action=TuyenDung">Tuyển dụng</a></li>
 				<li><a href="?action=LienHe">Liên hệ</a></li>
-				<li><a href="javascript:;">Khác</a>
+				<li><a href="javascript:;">Chức năng khác</a>
 					<ul>
 						<li><a href="?action=HoTroTrucTuyen">Hỗ trợ trực tuyến</a></li>
 						<li><a href="?action=Video">Video</a></li>
-						<li><a href="?action=HinhSlideTop">Hình Slide Banner</a></li>
+						<li><a href="?action=HinhSlideTop">Hình Slide</a></li>
+						<!--
 						<li><a href="?action=HinhSlideRight">Hình Slide Sản Phẩm</a></li>
 						<li><a href="?action=HinhSlideBottom">Hình ảnh Slide</a></li>
+						-->
 						<li><a href="?action=DoiMatKhau">Đổi mật khẩu Admin</a></li>
 						<li><a href="?action=EmailLienHe">Đổi Email liên hệ</a></li>
 						<li><a onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không !!! ');" href="?action=DangXuat">Đăng xuất</a></li>
