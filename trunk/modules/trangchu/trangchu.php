@@ -45,7 +45,7 @@
 			?>
 			</ul>
 		</div>
-		<p class="xem_them"><a href="">Xem thêm &raquo;</a></p>
+		<p class="xem_them"><a href="tintuc.html">Xem thêm &raquo;</a></p>
 	</div>
 	
 	<!--Noi dung Tab truyen thong-->
@@ -85,7 +85,7 @@
 				
 			</ul>
 		</div>
-		<p class="xem_them"><a href="">Xem thêm &raquo;</a></p>
+		<p class="xem_them"><a href="truyenthong.html">Xem thêm &raquo;</a></p>
 	</div>
 </div><!--End #tintuc-->
 

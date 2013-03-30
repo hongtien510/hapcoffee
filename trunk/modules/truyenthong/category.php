@@ -1,5 +1,5 @@
 <div id="category">
-	<h1 class="title_cat">Tin tức</h1>
+	<h1 class="title_cat">Truyền thông</h1>
 	<div id="content_cat">
 		<ul class="ul_content_cat">
 		<?php
