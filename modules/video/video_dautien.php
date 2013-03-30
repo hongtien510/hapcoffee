@@ -23,12 +23,13 @@
 				?>
 						<li>
 							<a  onclick="getvideo('<?php echo $row[urlvideo]?>')" href="javascript:;">
-								<img class="img_video" src="images/youtube.jpg" alt="<?php echo $row['tieude']?>" title="<?php echo $row['tieude']?>" />
+								<img class="img_video" src="http://i3.ytimg.com/vi/<?php echo $row['urlvideo']?>/default.jpg" alt="<?php echo $row['tieude']?>" title="<?php echo $row['tieude']?>" />
 							</a>
 							<p class="name_video">
 								<a  onclick="getvideo('<?php echo $row[urlvideo]?>')" href="javascript:;"> <?php echo $row['tieude']?></a>
 							</p>
-							<p class="des_video">Thương hiệu cà phê Hoàng Anh Phát được phát triển trên sự kế nghiệp gia đình ở Tp Ban Mê Thuột.</p>
+							<p class="des_video"></p>
+							<p class="des_video"><?php echo $row['mota']?></p>
 						</li>
 				<?php
 					}
