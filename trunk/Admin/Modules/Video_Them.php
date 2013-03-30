@@ -7,7 +7,8 @@
 		$UrlVideo=$_POST['urlvideo'];
 		$ThuTu=$_POST['thutu'];
 		$AnHien=@$_POST['anhien'];
-		$sql="insert into video values(NULL,'$TieuDe','$UrlVideo','$ThuTu','$AnHien')";
+		$mota=$_POST['mota'];
+		$sql="insert into video values(NULL,'$TieuDe','$UrlVideo','$ThuTu','$AnHien','$mota')";
 		mysql_query($sql);
 		//echo $sql;
 		echo "<script>alert('Thêm Video thành công');window.location='?action=Video';</script>";
@@ -37,6 +38,12 @@
       <input class="input300" type="text" name="thutu" id="thutu" value="<?php echo $thutumax+1; ?>" />
     </label></td>
   </tr>
+   <tr>
+			<th align="right" valign="top" scope="row">Mô tả : </th>
+			<td valign="top">
+			<textarea class="textarea700" name="mota" id="mota" cols="45" rows="5"></textarea>
+			</td>
+	</tr>
   <tr>
     <th align="right" valign="top" scope="row">Ẩn hiện :</th>
     <td><input name="anhien" type="checkbox" id="anhien" value="1"/><i>(Chọn nếu muốn bài viết không hiển thị)</i></td>

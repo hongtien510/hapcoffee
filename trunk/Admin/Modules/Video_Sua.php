@@ -11,12 +11,13 @@
 		$UrlVideo=$_POST['urlvideo'];
 		$ThuTu=$_POST['thutu'];
 		$AnHien=@$_POST['anhien'];
-		
+		$mota=$_POST['mota'];
 		
 		$sql1="update video set tieude='$TieuDe',
 									urlvideo='$UrlVideo',
 									thutu='$ThuTu',
-									anhien='$AnHien'
+									anhien='$AnHien',
+									mota='$mota'
 									where idvideo='$IDVideo'";
 		
 		//echo $sql1;
@@ -42,6 +43,12 @@
       <input class="input300" type="text" name="urlvideo" id="urlvideo" value="<?php echo $r['urlvideo'] ?>" />
     </label></td>
   </tr>
+  
+  <tr>
+    <th align="right" valign="middle" scope="row">Mô tả : </th>
+    <td><textarea class="textarea500" name="mota" id="mota"><?php echo $r['mota'] ?></textarea></td>
+  </tr>
+  
   <tr>
     <th align="right" valign="middle" scope="row">Thứ tự : </th>
     <td><label>
