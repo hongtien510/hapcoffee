@@ -8,7 +8,7 @@
 		<div class="content_detail_post">
 			<div id="jp-container" class="jp-container">
 					<?php
-					include('modules/gioiThieu/gioithieu_content.php');
+					include('modules/gioithieu/gioithieu_content.php');
 					?>
 			</div>
 		</div>

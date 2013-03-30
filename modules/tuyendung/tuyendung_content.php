@@ -95,7 +95,7 @@ else
 		{
 			$date = new DateTime($row['ngaydang']);
 			$ngaythang = $date->format('d.m.Y');
-			$linkchitiet =  ConvertUrl("?action=TuyenDung&mtd=$row[matuyendung]");
+			$linkchitiet =  ConvertUrl("?action=tuyendung&mtd=$row[matuyendung]");
 			// echo $linkchitiet;
 			echo "<tr bgcolor=\"#ffffff\" onmouseout=\"this.style.backgroundColor='#ffffff';\" title=\" Xem chi tiết \" onclick=\"window.location='$linkchitiet'\" onmouseover=\"this.style.backgroundColor='#CCCCCC';this.style.cursor='pointer';\" style=\"background-color: rgb(255, 255, 255);\">";
 			echo "<td width=70%>".$row['vitrituyendung']."</td>";			

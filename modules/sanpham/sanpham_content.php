@@ -109,7 +109,7 @@ else
 	while($row=mysql_fetch_array($query))
 	{
 		// gan link than thien vao
-		$link = ConvertUrl("?action=SanPham&idsp=$row[masanpham]&malsp=$maloaisanpham");
+		$link = ConvertUrl("?action=sanpham&idsp=$row[masanpham]&malsp=$maloaisanpham");
 		if(trim($row['urlhinh'])!="")
 		{
 		$urlhinhanh = "images/hinhsanpham/".$row['urlhinh'];

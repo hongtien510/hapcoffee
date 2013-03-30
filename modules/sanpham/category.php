@@ -21,7 +21,7 @@
 			// print_r($row['motangan']);
 			// echo "</pre>";
 		// gan link than thien vao
-		$link = ConvertUrl("?action=SanPham&idsp=$row[masanpham]");
+		$link = ConvertUrl("?action=sanpham&idsp=$row[masanpham]");
 		if(trim($row['urlhinh'])!="")
 		{
 		$urlhinhanh = "images/hinhsanpham/".$row['urlhinh'];
