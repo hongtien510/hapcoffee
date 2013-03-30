@@ -60,7 +60,7 @@ if(isset($_GET['idsp']))
 						<?php			
 						while($row=mysql_fetch_array($query))
 						{
-						$link = ConvertUrl("?action=SanPham&idsp=$row[masanpham]&malsp=$maloaisanpham");					
+						$link = ConvertUrl("?action=sanpham&idsp=$row[masanpham]&malsp=$maloaisanpham");					
 						?>
 							<div>
 								<span class="spctl_img"><img src="images/chambi2.gif"></span>
