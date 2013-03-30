@@ -15,12 +15,11 @@
 		<div class="hinhanhsanpham">
 			<p class="img_product"><img class="img_pro" src="images/hinhsanpham/<?php echo $r['urlhinh']?>" alt="<?php echo $r['tensanpham']?>" title="<?php echo $r['tensanpham']?>"/></p>
 			<ul class="ul_img_product">
-				<li><a href="javascript:;"><img class="img_pro1" src="images/cafe hap.jpg" alt="" title="" /></a></li>
-				<li><a href="javascript:;"><img class="img_pro2" src="images/coffee-so-1 mat sau.jpg" alt="" title="" /></a></li>
-				<li><a href="javascript:;"><img class="img_pro3" src="images/coffee-so-1.jpg" alt="" title="" /></a></li>
-				<li><a href="javascript:;"><img class="img_pro4" src="images/coffee cao cap.jpg" alt="" title="" /></a></li>
+				<li><a href="javascript:;"><img class="img_pro1" src="images/<?php echo $r['urlhinh']?>" alt="img_pro1" title="Chọn để thay đổi hình ảnh" /></a></li>
+				<li><a href="javascript:;"><img class="img_pro2" src="images/<?php echo $r['hinhsp1']?>" alt="img_pro2" title="Chọn để thay đổi hình ảnh" /></a></li>
+				<li><a href="javascript:;"><img class="img_pro3" src="images/<?php echo $r['hinhsp2']?>" alt="img_pro3" title="Chọn để thay đổi hình ảnh" /></a></li>
+				<li><a href="javascript:;"><img class="img_pro4" src="images/<?php echo $r['hinhsp3']?>" alt="img_pro4" title="Chọn để thay đổi hình ảnh" /></a></li>
 			</ul>
-
 		</div>
 		
 		<div class="thongtinsanpham">
