@@ -137,14 +137,6 @@ include('libs/hamhaydung.php');
 				$i++; 
 				} 
 			?>
-			
-		<!--
-				<p class="pro_first" id="product1"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-				<p id="product2"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-				<p id="product3"><a href=""><img src="images/cf3.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-				<p id="product4"><a href=""><img src="images/cf2.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-				<p id="product5"><a href=""><img src="images/cf1.png" alt="Cafe cao cấp" title="cafe cao cấp"/></a></p>
-		-->
 		</div>
 		
 	<?php 
