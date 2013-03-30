@@ -8,7 +8,7 @@ $mabv = $_GET['mbv'];
 if(isset($mabv)) 
 {
 // chi tiet gioi thieu
-	echo $sql="select *  from baiviet where anhien=0 AND mabv=".$mabv;
+	$sql="select *  from baiviet where anhien=0 AND mabv=".$mabv;
 	$query=mysql_query($sql);
 	if(mysql_num_rows($query)!=0)
 	{			

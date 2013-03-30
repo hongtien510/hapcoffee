@@ -1,5 +1,5 @@
 <?php
-$sql_tintuc="select * from baiviet where anhien='0' AND loaibaiviet='tintuc' order by mabv DESC LIMIT 0, 9";
+$sql_tintuc="select * from baiviet where anhien='0' AND loaibaiviet='tintuc' order by mabv DESC LIMIT 0, 15";
 $rs_tintuc=mysql_query($sql_tintuc);	
 ?>
 							

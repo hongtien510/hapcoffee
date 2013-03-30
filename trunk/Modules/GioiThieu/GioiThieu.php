@@ -7,10 +7,9 @@
 
 		<div class="content_detail_post">
 			<div id="jp-container" class="jp-container">
-		<?php
-		include('Modules/GioiThieu/GioiThieu_content.php');
-		?>
-
+					<?php
+					include('Modules/GioiThieu/GioiThieu_content.php');
+					?>
 			</div>
 		</div>
 </div>
