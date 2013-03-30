@@ -43,8 +43,8 @@
 	</div><!--End .banner-->
 	
 	 <?php 
-	// if(!isset($_SESSION['HoTenAdmin'])){
-	if(isset($_SESSION['HoTenAdmin'])){
+	if(!isset($_SESSION['HoTenAdmin'])){
+	// if(isset($_SESSION['HoTenAdmin'])){
 		
 		include('Admin/Modules/DangNhap.php');
 	}
@@ -94,9 +94,10 @@
 						-->
 						<li><a href="?action=DoiMatKhau">Đổi mật khẩu Admin</a></li>
 						<li><a href="?action=EmailLienHe">Đổi Email liên hệ</a></li>
-						<li><a onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không !!! ');" href="?action=DangXuat">Đăng xuất</a></li>
+						
 					</ul>
 				</li>
+				<li><a onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không !!! ');" href="?action=DangXuat">Đăng xuất</a></li>
 				<li><a href="index.php" target="_blank">Xem trang chủ</a></li>
 			</ul>
 		</div><!--End .menu-top-->
