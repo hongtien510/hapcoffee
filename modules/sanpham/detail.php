@@ -39,7 +39,7 @@
 			<div id="jp-container" class="jp-container2">
 			
 									
-			
+				<?php echo $r['baiviet'];?>
 			
 			
 			
