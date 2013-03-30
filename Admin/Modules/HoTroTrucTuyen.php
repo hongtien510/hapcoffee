@@ -1,4 +1,5 @@
 <div class="HoTro">
+<!--
 <h2 class="style_text_2">Hỗ trợ trực tuyến</h2>
 <table width="90%" border="1" cellspacing="0" cellpadding="0">
  <caption>
@@ -37,7 +38,7 @@
     </label></td>
     </tr>
 </table>
-
+-->
 <table width="90%" border="1" cellspacing="0" cellpadding="0">
  <caption>
     <h2>Hỗ trợ qua điện thoại</h2>
