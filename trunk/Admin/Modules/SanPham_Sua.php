@@ -24,6 +24,30 @@
 			if(file_exists("images/hinhsanpham/".$r1['urlhinh'])) unlink("images/hinhsanpham/".$r1['urlhinh']);
 		}
 		
+		$file1=$_FILES['hinhsp1'];
+		if($file1['name']!="")//Neu nhu NSD co upload file
+		{
+			$UrlHinh1=time().'_'.$file1['name'];
+			move_uploaded_file($file1['tmp_name'],"images/hinhsanpham/".$UrlHinh1);
+			if(file_exists("images/hinhsanpham/".$r1['hinhsp1'])) unlink("images/hinhsanpham/".$r1['hinhsp1']);
+		}
+		
+		$file2=$_FILES['hinhsp2'];
+		if($file2['name']!="")//Neu nhu NSD co upload file
+		{
+			$UrlHinh2=time().'_'.$file2['name'];
+			move_uploaded_file($file2['tmp_name'],"images/hinhsanpham/".$UrlHinh2);
+			if(file_exists("images/hinhsanpham/".$r1['hinhsp2'])) unlink("images/hinhsanpham/".$r1['hinhsp2']);
+		}
+		
+		$file3=$_FILES['hinhsp3'];
+		if($file3['name']!="")//Neu nhu NSD co upload file
+		{
+			$UrlHinh3=time().'_'.$file3['name'];
+			move_uploaded_file($file3['tmp_name'],"images/hinhsanpham/".$UrlHinh3);
+			if(file_exists("images/hinhsanpham/".$r1['hinhsp3'])) unlink("images/hinhsanpham/".$r1['hinhsp3']);
+		}
+		
 		$sql2="update sanpham set maloaisanpham='$MaLoaiSanPham',
 									   tensanpham='$TenSanPham',
 									   motangan='$MoTaNgan',
@@ -32,7 +56,11 @@
 									   ngaydang=now(),
 									   anhien='$AnHien',
 									   thutu='$ThuTu',
-									   khoiluong='$KhoiLuong'
+									   khoiluong='$KhoiLuong',
+									   hinhsp1='$UrlHinh1',
+									   hinhsp2='$UrlHinh2',
+									   hinhsp3='$UrlHinh3',
+									   baiviet='$baiviet'
 									   where masanpham=".$r1['masanpham'];
 		//echo $sql2;
 		mysql_query($sql2);
@@ -51,6 +79,7 @@
       <input class="input300" type="text" name="tensanpham" id="tensanpham" value="<?php echo $r1['tensanpham'] ?>" />
     </label></td>
   </tr>
+  <!--
   <tr>
     <th align="right" valign="middle" scope="row">Loại sản phẩm :</th>
     <td><label>
@@ -67,6 +96,7 @@
       </select>
     </label></td>
   </tr>
+  -->
   <tr>
     <th align="right" valign="middle" scope="row">Mô tả ngắn :</th>
     <td><textarea class="textarea100" name="motangan" id="motangan"><?php echo $r1['motangan'] ?></textarea></td>
@@ -75,18 +105,53 @@
     <th align="right" valign="middle" scope="row">Mô tả đầy đủ : </th>
     <td><textarea class="textarea500" name="motadaydu" id="motadaydu"><?php echo $r1['motadaydu'] ?></textarea></td>
   </tr>
+  
+  <tr>
+    <th align="right" valign="middle" scope="row">Bài viết sản phẩm :</th>
+    <td><textarea class="textarea100" name="baiviet" id="baiviet"><?php echo $r1['baiviet'] ?></textarea></td>
+  </tr>
+  
   <tr>
     <th align="right" valign="middle" scope="row">Khối lượng : </th>
     <td><input class="input300" name="khoiluong" id="khoiluong" value="<?php echo $r1['khoiluong'] ?>"></input></td>
   </tr>
   <tr>
-    <th align="right" valign="middle" scope="row">Hình ảnh : </th>
+    <th align="right" valign="middle" scope="row">Hình đại diện : </th>
     <td>
 	<img src="images/hinhsanpham/<?php echo $r1['urlhinh']?>" title="<?php echo $r1['tensanpham'] ?>"  height="150"/></br>
 	<input style="border:1px solid #cccccc" size="33" class="input300" type="file" name="urlhinh" id="urlhinh" value="<?php echo $r1['urlhinh'] ?>" /></br>
 	<i>(Bỏ qua mục này nếu không muốn thay đổi hình ảnh)</i>
 	</td>
   </tr>
+  
+   <tr>
+    <th align="right" valign="middle" scope="row">Hình sản phẩm 1: </th>
+    <td>
+	<img src="images/hinhsanpham/<?php echo $r1['hinhsp1']?>" title="<?php echo $r1['tensanpham'] ?>"  height="150"/></br>
+	<input style="border:1px solid #cccccc" size="33" class="input300" type="file" name="hinhsp1" id="hinhsp1" value="<?php echo $r1['hinhsp1'] ?>" /></br>
+	<i>(Bỏ qua mục này nếu không muốn thay đổi hình ảnh)</i>
+	</td>
+  </tr>
+  
+  <tr>
+    <th align="right" valign="middle" scope="row">Hình sản phẩm 2: </th>
+    <td>
+	<img src="images/hinhsanpham/<?php echo $r1['hinhsp2']?>" title="<?php echo $r1['tensanpham'] ?>"  height="150"/></br>
+	<input style="border:1px solid #cccccc" size="33" class="input300" type="file" name="hinhsp2" id="hinhsp2" value="<?php echo $r1['hinhsp2'] ?>" /></br>
+	<i>(Bỏ qua mục này nếu không muốn thay đổi hình ảnh)</i>
+	</td>
+  </tr>
+  
+  <tr>
+    <th align="right" valign="middle" scope="row">Hình sản phẩm 3: </th>
+    <td>
+	<img src="images/hinhsanpham/<?php echo $r1['hinhsp3']?>" title="<?php echo $r1['tensanpham'] ?>"  height="150"/></br>
+	<input style="border:1px solid #cccccc" size="33" class="input300" type="file" name="hinhsp3" id="hinhsp3" value="<?php echo $r1['hinhsp3'] ?>" /></br>
+	<i>(Bỏ qua mục này nếu không muốn thay đổi hình ảnh)</i>
+	</td>
+  </tr>
+  
+  
   <tr>
     <th align="right" valign="middle" scope="row">Ẩn hiện :</th>
     <td><label>
@@ -109,4 +174,7 @@
 <script>
 	var editor=CKEDITOR.replace( 'motadaydu' );
 	CKFinder.setupCKEditor( editor, 'libs/ckfinder/' ) ;
+	
+	var baivieteditor=CKEDITOR.replace( 'baiviet' );
+	CKFinder.setupCKEditor( baivieteditor, 'libs/ckfinder/' ) ;
 </script>
