@@ -46,14 +46,14 @@
 	if(!isset($_SESSION['HoTenAdmin'])){
 	// if(isset($_SESSION['HoTenAdmin'])){
 		
-		include('Admin/Modules/DangNhap.php');
+		include('admin/modules/dangnhap.php');
 	}
 	else 
 	{
 	?>
     <div class="menu_top">
 			<ul>
-				<li><a href="?action=SanPham">Sản phẩm</a>
+				<li><a href="?action=sanpham">Sản phẩm</a>
 					<ul>
 					<!--
 						<li><a href="?action=LoaiSanPham">Loại sản phẩm</a></li>
@@ -72,32 +72,32 @@
 				-->
 				<li><a href="javascript:;">Bài viết</a>
 					<ul>
-						<li><a href="?action=GioiThieu">Giới thiệu</a></li>					
-						<li><a href="?action=GioiThieu&lbv=truyenthong">Truyền thông</a></li>
-						<li><a href="?action=GioiThieu&lbv=tintuc">Tin tức</a></li>
-						<li><a href="?action=GioiThieu&lbv=cuocsoncafe">Cuộc sống cafe</a></li>
+						<li><a href="?action=gioithieu">Giới thiệu</a></li>					
+						<li><a href="?action=gioithieu&lbv=truyenthong">Truyền thông</a></li>
+						<li><a href="?action=gioithieu&lbv=tintuc">Tin tức</a></li>
+						<li><a href="?action=gioithieu&lbv=cuocsoncafe">Cuộc sống cafe</a></li>
 					</ul>
 				</li>
 				<!--
 				<li><a href="?action=PhanPhoi">Phân phối</a></li>
 				-->
-				<li><a href="?action=TuyenDung">Tuyển dụng</a></li>
-				<li><a href="?action=LienHe">Liên hệ</a></li>
+				<li><a href="?action=tuyendung">Tuyển dụng</a></li>
+				<li><a href="?action=lienhe">Liên hệ</a></li>
 				<li><a href="javascript:;">Chức năng khác</a>
 					<ul>
-						<li><a href="?action=HoTroTrucTuyen">Hỗ trợ trực tuyến</a></li>
-						<li><a href="?action=Video">Video</a></li>
-						<li><a href="?action=HinhSlideTop">Hình Slide</a></li>
+						<li><a href="?action=hotrotructuyen">Hỗ trợ trực tuyến</a></li>
+						<li><a href="?action=video">Video</a></li>
+						<li><a href="?action=hinhslidetop">Hình Slide</a></li>
 						<!--
 						<li><a href="?action=HinhSlideRight">Hình Slide Sản Phẩm</a></li>
 						<li><a href="?action=HinhSlideBottom">Hình ảnh Slide</a></li>
 						-->
-						<li><a href="?action=DoiMatKhau">Đổi mật khẩu Admin</a></li>
-						<li><a href="?action=EmailLienHe">Đổi Email liên hệ</a></li>
+						<li><a href="?action=doimatkhau">Đổi mật khẩu Admin</a></li>
+						<li><a href="?action=emaillienhe">Đổi Email liên hệ</a></li>
 						
 					</ul>
 				</li>
-				<li><a onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không !!! ');" href="?action=DangXuat">Đăng xuất</a></li>
+				<li><a onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không !!! ');" href="?action=dangxuat">Đăng xuất</a></li>
 				<li><a href="index.php" target="_blank">Xem trang chủ</a></li>
 			</ul>
 		</div><!--End .menu-top-->
@@ -105,8 +105,8 @@
     <div id="ctn_admin">
 	<?php 
     $Action=@$_GET['action'];
-	if($Action=="") $Action='SanPham';
-	include('Admin/Modules/'.$Action.'.php');
+	if($Action=="") $Action='sanpham';
+	include('admin/modules/'.$Action.'.php');
     ?>
     </div><!--End #ctn_admin-->
     
